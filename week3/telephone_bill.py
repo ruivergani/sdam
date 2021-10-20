@@ -9,7 +9,7 @@ call_charge = float((minutes * 0.15))
 vat = float((call_charge * 0.20))
 total_bill = float((call_charge + vat))
 
-# output data
+# output data2
 print("\nNumber of minutes used: {}" .format(minutes))
 print("Basic call charge: £ {:.2f}" .format(call_charge))
 print("VAT due: £ {:.2f}" .format(vat))
