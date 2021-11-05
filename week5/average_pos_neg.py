@@ -1,4 +1,4 @@
-# average pos_neg
+# average pos_neg.
 
 n = 0
 counter_pos = 0
