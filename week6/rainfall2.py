@@ -14,5 +14,6 @@ print("\n")
 
 # print all the values from list
 for i in range(len(months)):
-    print("Rainfall for " + months[i] + ": " + str(rain[i]))
+    counter = rain[i]
+    print(months[i] + ": " + (counter*"x"))
 
