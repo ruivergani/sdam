@@ -10,6 +10,12 @@ card_face_up = [["Jack", "King", "Ace", "Queen"],
                 ["Jack", "King", "Ace", "Queen"],
                 ["Jack", "King", "Ace", "Queen"],
                 ["Jack", "King", "Ace", "Queen"]]
+
+card_face_down = [[" * ", " * ", " * ", " * "],
+                  [" * ", " * ", " * ", " * "],
+                  [" * ", " * ", " * ", " * "],
+                  [" * ", " * ", " * ", " * "]]
+# card face up
 j = 0
 print("Face Up: ")
 print("   0    1     2    3")
@@ -22,21 +28,21 @@ for i in range(len(card_face_up)):
 # card face down
 print("\nFace Down: ")
 print("   0   1   2   3")
-for i in range(len(card_face_up)):
+for i in range(len(card_face_down)):
     print(i, end=" ", sep=" ")
-    for j in range(len(card_face_up[i])):
-        print(" * ", end=" ")
+    for j in range(len(card_face_down[i])):
+        print(card_face_down[i][j], end=" ")
     print()
 
-# request from user
+# first card input
 row = int(input("\nEnter a card position (row): "))
 column = int(input("Enter a card position (column): "))
-# access an index (first card)
+# print first card
 print("\nFirst Card chosen: ", card_face_up[row][column])
-
-x = int(input("\nEnter second card to compare: (row)"))
-y = int(input("Enter second card to compare: (column)"))
-# access an index (second card)
+# second card input
+x = int(input("\nEnter second card to compare (row): "))
+y = int(input("Enter second card to compare (column): "))
+# print second card
 print("\nSecond Card chosen: ", card_face_up[x][y])
 
 while card_face_up[row][column] != card_face_up[x][y]:
@@ -46,8 +52,8 @@ while card_face_up[row][column] != card_face_up[x][y]:
     column = int(input("Enter a card position (column): "))
     # access an index (first card)
     print("\nFirst Card chosen: ", card_face_up[row][column])
-    x = int(input("\nEnter second card to compare: (row)"))
-    y = int(input("Enter second card to compare: (column)"))
+    x = int(input("\nEnter second card to compare (row): "))
+    y = int(input("Enter second card to compare (column): "))
     # access an index (second card)
     print("\nSecond Card chosen: ", card_face_up[x][y])
 else:
