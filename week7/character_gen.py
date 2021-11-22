@@ -1,4 +1,4 @@
-# character gen
+# character gen (NOT FINISHED YET)
 
 import random
 import math
