@@ -1,41 +1,32 @@
-# importing the time module (NOT COMPLETED)
+# Hangman game
 
 import time
-
 name = input("What is your name? ")
 print("Hello, " + name, "Time to play hangman!")
-print('')
+print("")
 time.sleep(1)
 print("Start guessing...")
-time.sleep(9)
-
-word = "iron man"
+time.sleep(0.5)
+word = "secret"
 guesses = ''
 turns = 10
-
 while turns > 0:
     failed = 0
-
     for char in word:
         if char in guesses:
-            print(char, )
+            print(char)
         else:
-            print("_", )
-    failed += 1
-
+            print("_")
+            failed += 1
     if failed == 0:
         print("You won")
         break
-print()
-
-guess = input("guess a character:")
-guesses += guess
-
-if guess not in word:
-    turns -= 1
-
-print("Wrong")
-print("You have", + turns, 'more guesses')
-
-if turns == 0:
-    print("You Lose")
+    print('')
+    guess = input("guess a character:")
+    guesses += guess
+    if guess not in word:
+        turns -= 1  # decrement turn
+        print("Wrong")
+    print("You have", + turns, 'more guesses')
+    if turns == 0:
+        print("You Lose")
