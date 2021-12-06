@@ -1,5 +1,4 @@
 # selection sort algorithm
-
 def sort(data):
     for this_index in range(len(data) - 1):
         swap_index = find_smallest(data, this_index)
@@ -16,4 +15,12 @@ def find_smallest(sort_data, start_index):
 def swap(swap_data, from_index, to_index):
     swap_data[from_index], swap_data[to_index] =\
         swap_data[to_index], swap_data[from_index]
+
+
+results = [8, 1, 3, 10]
+
+sort(results)
+
+for result in results:
+    print(result)
 
