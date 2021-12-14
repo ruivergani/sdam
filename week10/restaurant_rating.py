@@ -20,8 +20,9 @@ while counter != -1:
             rating = (rating + vote)
             n += 1
         elif vote == -1:
-            print("Exiting Program.")
+            print("\nExiting Program.")
             counter = -1
+            average = (rating / n)
         else:
             raise Exception
     except ValueError:  # validate integer
@@ -29,20 +30,20 @@ while counter != -1:
     except Exception:  # validate range 1-5
             print("The value must be in the range 1-5")
 
-average = (rating / n)
+
 result = round(average, 2)
 y = PrettyTable()
 y.field_names = ["Vote Quantity", "Average"]
-y.add_row([n, average])
+y.add_row([n, result])
 print(y)
 
-if result == 1:
+if 1 < result < 2:
     print("\nFinal rate is: Very Poor")
-elif result == 2:
+elif 2 < result < 3:
     print("\nFinal rate is: Poor")
-elif result == 3:
-    print("\nFinal rate is: Medium")
-elif result == 4:
+elif 3 < result < 4:
     print("\nFinal rate is: Good")
-else:
+elif 4 < result < 5:
     print("\nFinal rate is: Very Good")
+else:
+    print("\nFinal rate is: 0.")
