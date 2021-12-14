@@ -1,5 +1,7 @@
 import json
 
+# data serialise to json
+# object data type
 classes = {
     "warrior": {"str": 15, "int": "-", "wis": "-", "dex": 12, "con": 10},
     "wizard": {"str": "-", "int": 15, "wis": 10, "dex": 10, "con": "-"},
@@ -8,8 +10,8 @@ classes = {
 }
 
 json_string = json.dumps(classes, indent=2)
-
 print(json_string)
 
-with open('resources/char_classes.json', 'w') as f:
+# write into the JSON file
+with open('char_classes.json', 'w') as f:
     json.dump(classes, f, indent=2)
