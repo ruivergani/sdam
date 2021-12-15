@@ -2,7 +2,7 @@
 n = 0
 positive = 0
 negative = 0
-while n < 10:
+for n in range(1, 10):
     number = int(input("\nType either a positive or negative number: "))
     # calculations
     if number > 0:
@@ -10,9 +10,10 @@ while n < 10:
         n += 1
     else:
         negative = ((- number) + negative)
+        result = -negative
         n += 1
 
 # output
 print("\nSum of positive: {} " .format(positive))
-print("Sum of negative: -{} " .format(negative))
+print("Sum of negative: {} " .format(result))
 
