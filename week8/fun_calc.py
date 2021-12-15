@@ -2,9 +2,10 @@
 
 import math
 
+
 def add(num1, num2):
     result = (num1 + num2)
-    print("{} + {}: {}" .format(num1, num2, result))
+    print("{} + {}: {}".format(num1, num2, result))
 
 
 def sub(num1, num2):
@@ -19,7 +20,7 @@ def multiply(num1, num2):
 
 def division(num1, num2):
     result = (num1 / num2)
-    print("{} / {}: {}".format(num1, num2, result))
+    print("{} / {}: {:.2f}".format(num1, num2, result))
 
 
 def restOfDivision(num1, num2):

@@ -24,7 +24,7 @@ while option != 3:
             while True:
                 password = str(input("Password: "))
                 is_valid = False
-                if (len(password) <=8):
+                if (len(password) <= 8):
                     print("\nNot valid! Must be at least 8 characters long.")
                     print()
                     continue
@@ -50,23 +50,25 @@ while option != 3:
                     print("\nPassword confirmed.")
                     is_valid2 = True
                     break
-
             if is_valid:
                 print("** Password is valid **")
             # save data to file (nested dictionary not used)
-            passwords = {"username": username, "password": password}
+            passwords = {
+                counter: {"username": username, "password": password}
+            }
             json_string = json.dumps(passwords, indent=2)
             # write into the JSON file
             with open('password.json', 'a') as file_object:
                 json.dump(passwords, file_object)
 
         elif option == 2:
-            print("Option 2")
-            # enter username and password anc check against json file
+            print("Selected option 2")
         else:
             print("Wrong Option")
+
     except ValueError:
         print("Requires an integer type.")
+
     except Exception:
         if option == 3:
             print("Exiting program...")
