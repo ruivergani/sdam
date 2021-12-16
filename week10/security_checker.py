@@ -25,7 +25,7 @@ while option != 3:
             while True:
                 password = str(input("Password: "))
                 is_valid = False
-                if (len(password) <= 8):
+                if len(password) <= 8:
                     print("\nNot valid! Must be at least 8 characters long.")
                     print()
                     continue
@@ -61,14 +61,53 @@ while option != 3:
                     file_data["user_details"].append(new_data)
                     file.seek(0)
                     json.dump(file_data, file, indent=4)
-
-
             # Python object to be appended
             data = {"username": username, "password": password}
             write_json(data)
 
         elif option == 2:
-            print("Selected option 2")
+            # load data from the file
+            f = open('data.json')
+            data = json.load(f)
+            while True:
+                turns = 0
+                if turns > 3:
+                    print("You are locked out.")
+                    exit()
+                else:
+                    username_user = input("\nEnter username: ")
+                    for i in data['user_details']:
+                        if username_user == i['username']:
+                            # validation for password
+                            while True:
+                                password_user = str(input("Password: "))
+                                is_valid = False
+                                if len(password_user) <= 8:
+                                    print("\nNot valid! Must be at least 8 characters long.")
+                                    print()
+                                    continue
+                                elif re.search("[\s]", password_user):
+                                    print("\nIt should not contain spaces.")
+                                    print()
+                                    continue
+                                elif password_user[0].isdigit():
+                                    print("\nShould not begin with a number.")
+                                    print()
+                                    continue
+                                else:
+                                    if password_user == i['password'] and username_user == i['username']:
+                                        print("Welcome to the system.")
+                                        exit()
+                                    else:
+                                        print("Try again...")
+                                        turns += 1
+                                        break
+                            # end of while
+                            break
+                            False
+                        else:
+                            continue
+
         else:
             print("Wrong Option")
 
