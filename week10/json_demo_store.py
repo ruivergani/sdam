@@ -10,8 +10,6 @@ classes = {
 }
 
 json_string = json.dumps(classes, indent=2)
-print(json_string)
-
 # write into the JSON file
 with open('char_classes.json', 'w') as f:
     json.dump(classes, f, indent=2)

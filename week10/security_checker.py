@@ -6,6 +6,7 @@ import re
 print()
 option = 0
 counter = 0
+
 while option != 3:
     counter += 1
     # menu display
@@ -52,14 +53,19 @@ while option != 3:
                     break
             if is_valid:
                 print("** Password is valid **")
-            # save data to file (nested dictionary not used)
-            passwords = {
-                counter: {"username": username, "password": password}
-            }
-            json_string = json.dumps(passwords, indent=2)
-            # write into the JSON file
-            with open('password.json', 'a') as file_object:
-                json.dump(passwords, file_object)
+
+            # function to append data into file
+            def write_json(new_data, filename='data.json'):
+                with open(filename, 'r+') as file:
+                    file_data = json.load(file)
+                    file_data["user_details"].append(new_data)
+                    file.seek(0)
+                    json.dump(file_data, file, indent=4)
+
+
+            # Python object to be appended
+            data = {"username": username, "password": password}
+            write_json(data)
 
         elif option == 2:
             print("Selected option 2")

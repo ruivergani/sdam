@@ -1,0 +1,28 @@
+{
+    "user_details": [
+        {
+            "username": "rui neto",
+            "password": "testing1234"
+        },
+        {
+            "username": "gabor",
+            "password": "online12345"
+        },
+        {
+            "username": "rui vergani",
+            "password": "testing1234"
+        },
+        {
+            "username": "bela",
+            "password": "amazing123"
+        },
+        {
+            "username": "one",
+            "password": "amazing123"
+        },
+        {
+            "username": "two",
+            "password": "amzaing123"
+        }
+    ]
+}
