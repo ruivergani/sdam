@@ -6,13 +6,13 @@ number = int(input("\nType a number: "))
 temp = number % 2
 
 if number == 0:  # if statement condition
-    print("Result: Natural number")
+    print("Result: Neutral number")
 elif temp == 0:
     result = bool(True)
-    print("Result: Even")
+    print(result)
 else:
     result = bool(False)
-    print("Result: Odd")
+    print(result)
 
 
 
