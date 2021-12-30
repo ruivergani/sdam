@@ -5,6 +5,7 @@ def sort(data):
         if swap_index != this_index:
             swap(data, swap_index, this_index)
 
+
 def find_smallest(sort_data, start_index):
     swap_index = start_index
     for index in range(start_index + 1, len(sort_data)):
@@ -12,8 +13,9 @@ def find_smallest(sort_data, start_index):
             swap_index = index
         return swap_index
 
+
 def swap(swap_data, from_index, to_index):
-    swap_data[from_index], swap_data[to_index] =\
+    swap_data[from_index], swap_data[to_index] = \
         swap_data[to_index], swap_data[from_index]
 
 
@@ -24,3 +26,9 @@ sort(results)
 for result in results:
     print(result)
 
+
+def linear_unsorted(haystack, needle):
+    index = 0
+    while index < len(haystack) and haystack[index] != needle:
+        index += 1
+    return index if index < len(haystack) else -1
