@@ -38,3 +38,12 @@ else:
     print("\nSum of negative: {} " .format(neg))
     print("Average of negative: {} " .format(average_neg))
 
+# week 5
+# deterministic x non-deterministic
+# range(1,6) - range(5, 51, 5) = start, stop, step | range(10, 0, -1) = negative progression [10,9,8,7,6,5,4,3,2,1]
+# while i < 6:
+#   print(i)
+#   i += 1
+# for x in fruits:
+#   print(x)
+

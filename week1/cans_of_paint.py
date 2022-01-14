@@ -27,3 +27,4 @@ print("\nNumber of cans required: {}" .format(math.ceil(can_required)))  # (inte
 print("Number of cans in box: {}" .format(can_per_box))  # volume of box / volume of can (integer)
 print("Number of full boxes: {}" .format(amount_full_boxes))  # total can required / can per box = quantity of full boxes needed (integer)
 print("Cans not packed in boxes: {}" .format(remaining_cans))  # can required - total quantity of cans in boxes (round up the value)
+

@@ -67,5 +67,20 @@ else:
     deficit[attribute_sacrifice] = deficit[attribute_sacrifice] - points_exchange
     print("Attribute Sacrificed has now: ", deficit[attribute_sacrifice])
 
+# Dictionaries
+# months = {"Jan":31, "Feb":28}
+# months['Feb']=28
+# .keys() | .values() | .items()
+# thisdic.update({"March": 30})
+# thisdic.pop("model") or .popitem() or del thisdic or del thisdic["model"]
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[6:2:-2])
+['mango', 'kiwi']
+
+# Negative indexing means starting from the end of the list.
+# This example returns the items from index -4 (included) to index -1 (excluded)
+# Remember that the last item has the index -1,
+
 
 

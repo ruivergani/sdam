@@ -23,3 +23,13 @@ else:
 
 # the main issue with this algorithm is that there is no validation at all and just simple uppercase letter or
 # type error will provide user wrong output
+
+# week 4
+# Selection (IF STATEMENT) = if elif else
+# not(x>y) result is False (x = 4 and y = 3) (will always be the opposite)
+# Logical and Operational Operators
+
+# Lists: mylist=["apple", "banana"] (different data type, multiple values, allow duplicate, changeable)
+# Tuples: mytuple=("apple", "banana") (store in a single variable, unchangeable)
+# Sets: thisset={"apple", "banana"} (unordered, unchangeable, no index, no duplicate items)
+# Dictionary: data in key:value pairs, thisdic={"brand":"ford"} | mutable | using keys index | no duplicate | ordered

@@ -15,3 +15,11 @@ average = float(sum / 4)
 # output
 print("\nTotal Sum: ", sum)
 print("Average is: {:.2f}" .format(average))
+
+# week 3
+# Sequence: step by step
+# Iteration: repetitive statement = loop (do, while, for)
+# Selection = choose (if/elif/else)
+# syntax error (machine error or code) | logical error (does not give message, executes, but result is wrong) | runtime error (division 0)
+# Test plan: input | reason | expected | actual
+# Debug is the process of removing errors

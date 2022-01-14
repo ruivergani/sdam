@@ -16,7 +16,9 @@
 # .rjust() = right justified
 # .ljust() = left justified
 # .split() = split string
+# .strip() = remove whitespace
 # input holds String value | remember python only prints String value (str(round,2) for example
+# An escape character is a backslash \ followed by the character you want to insert.
 
 # week 3
 # Sequence: step by step
