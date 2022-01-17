@@ -1,0 +1,7 @@
+a. A company’s profit: float because it could be decimal number £657.60.
+b. A person’s weight: float because it could be decimal like 98.5kg.
+c. A book title: string, it could be a phrase - like "Rui Vergani Neto Biography".
+d. Average rainfall in September: float, because the average rain would me measured in m3 and then you could have decimal numbers.
+e. Number of runs scored by a cricketer: integer value, he can not run half run, would always be integers numbers.
+f. A telephone number, including area code: string of characters, the best pratice is to store in string due to the different phone numbers each country can have.
+g. A dress size: string or char - because would be max to three character like M, L or XL..
